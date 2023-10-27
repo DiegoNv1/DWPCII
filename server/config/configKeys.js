@@ -14,11 +14,11 @@ const defaultConfig = {
 };
 
 const devConfig = [];
-
+    MONGO_URL: process.env.DEV_DATABASE_URL,
 const testConfig = [];
-
+    TEST_VALUE: 200,
 const prodConfig = [];
-
+    
 // Exporting el objeto de configuración
 export default {
     ...defaultConfig,
