@@ -66,6 +66,11 @@ if (nodeEnviroment === 'development') {
 // Configuring the template engine
 configTemplateEngine(app);
 
+// Database connection Checker Middleware
+app.use((req, res, next) => {
+  if(mongoose.connection.readyState)
+})
+
 // Se establecen los middlewares
 app.use(morgan('dev', { stream: log.stream }));
 app.use(express.json());
