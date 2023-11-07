@@ -1,16 +1,19 @@
-// Actions methods
+// Action Methods
 
-// GET '/user/project/["projects", "dashboard"]'
-const projects = (req, res) => {
-    res.send("🚧 UNDER CONSTRUCTION '/user/project/[projects o dashboard]' 🚧");
-  };
-  
-  const forms = (req, res) => {
-    res.send("🚧 UNDER CONSTRUCTION '/user/project/[add-form o add]' 🚧");
-  };
-  
-  // Controlador Home
-  export default {
-    projects,
-    forms,
-  };
+// GET '/project/addForm'
+// GET '/project/add'
+const addForm = (req, res) => {
+  res.send("🚧 UNDER CONSTRUCTION GET  '/project/addForm' 🚧");
+};
+
+// GET '/project/showDashboard'
+// GET '/project/projects'
+// GET '/project'
+const showDashboard = (req, res) => {
+  res.send("🚧 UNDER CONSTRUCTION GET  '/project/showDashboard' 🚧");
+};
+
+export default {
+  addForm,
+  showDashboard,
+};

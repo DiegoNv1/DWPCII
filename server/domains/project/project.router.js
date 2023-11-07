@@ -8,11 +8,15 @@ import projectController from './project.controller';
 const router = new Router();
 
 // Enrutamos
-// GET '/user/["projects", "dashboard"]
-router.get(['/', '/projects', '/dashboard'], projectController.projects);
 
-// GET '/user/project/["add-form", "add"]
-router.get(['/add-form', '/add'], projectController.forms);
+// GET '/project/addForm'
+// GET '/project/add'
+// GET '/project'
+router.get(['/', '/addForm', '/add'], projectController.addForm);
+
+// GET '/project/showDashboard'
+// GET '/project/projects'
+router.get(['/showDashboard', '/projects'], projectController.showDashboard);
 
 // Exporto este tramo de ruta
 export default router;
