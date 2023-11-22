@@ -13,15 +13,11 @@ import projectValidator from './project.validator';
 const router = new Router();
 
 // Enrutamos
+// GET "/project"
+router.get('/', projectController.showDashboard);
 
-// GET '/project/addForm'
-// GET '/project/add'
-// GET '/project'
-router.get(['/', '/addForm', '/add'], projectController.addForm);
-
-// GET '/project/showDashboard'
-// GET '/project/projects'
-router.get(['/showDashboard', '/projects'], projectController.showDashboard);
+// GET "/project/add"
+router.get('/add', projectController.add);
 
 // POST "/project/add"
 router.post(
@@ -31,6 +27,19 @@ router.post(
     getObject: projectValidator.getProject,
   }),
   projectController.addPost,
+);
+
+// GET "/project/edit/:id"
+router.get('/edit/:id', projectController.edit);
+
+// PUT "/project/edit/:id"
+router.put(
+  '/edit/:id',
+  ValidateFactory({
+    schema: projectValidator.projectSchema,
+    getObject: projectValidator.getProject,
+  }),
+  projectController.editPut,
 );
 
 // Exporto este tramo de ruta
