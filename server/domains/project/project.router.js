@@ -2,7 +2,7 @@
 import { Router } from 'express';
 
 // Importando el controlador
-import projectController from './project.controller';
+import projectController from 'edit/project.controller';
 
 // Importando factory de validación
 import ValidateFactory from '../../services/validateFactory';
