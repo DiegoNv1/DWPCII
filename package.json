@@ -10,7 +10,7 @@
     "cleanc": "rm -f ./public/bundle.js ./public/styles/app.css",
     "cleans": "rm -rf ./dist",
     "dev": "NODE_ENV=development DEBUG=dwpcii:server babel-watch ./server/bin/www",
-    "devc": "NODE_ENV=development webpack serve --config ./webpack.dev.config.js --mode development",
+    "devc": "NODE_ENV=development webpack DWPCII --config ./webpack.dev.config.js --mode development",
     "start": "node ./dist/bin/www"
   },
   "dependencies": {
